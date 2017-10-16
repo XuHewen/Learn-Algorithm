@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/xu/work/algorithm/Heap/main.cpp" "/home/xu/work/algorithm/Heap-build/CMakeFiles/HeapSort.dir/main.cpp.o"
+  "/home/xu/work/algorithm/Sort/main.cpp" "/home/xu/work/algorithm/Sort-build/CMakeFiles/Sort.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

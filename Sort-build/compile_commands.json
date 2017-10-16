@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/xu/work/algorithm/Sort-build",
+  "command": "/usr/bin/c++    -g   -std=gnu++11 -o CMakeFiles/Sort.dir/main.cpp.o -c /home/xu/work/algorithm/Sort/main.cpp",
+  "file": "/home/xu/work/algorithm/Sort/main.cpp"
+}
+]

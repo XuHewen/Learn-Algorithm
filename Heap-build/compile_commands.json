@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/home/xu/work/algorithm/Heap-build",
-  "command": "/usr/bin/c++    -g   -std=gnu++11 -o CMakeFiles/HeapSort.dir/main.cpp.o -c /home/xu/work/algorithm/Heap/main.cpp",
-  "file": "/home/xu/work/algorithm/Heap/main.cpp"
-}
-]

@@ -54,45 +54,45 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/xu/work/algorithm/Heap
+CMAKE_SOURCE_DIR = /home/xu/work/algorithm/Sort
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/xu/work/algorithm/Heap-build
+CMAKE_BINARY_DIR = /home/xu/work/algorithm/Sort-build
 
 #=============================================================================
-# Target rules for target CMakeFiles/HeapSort.dir
+# Target rules for target CMakeFiles/Sort.dir
 
 # All Build rule for target.
-CMakeFiles/HeapSort.dir/all:
-	$(MAKE) -f CMakeFiles/HeapSort.dir/build.make CMakeFiles/HeapSort.dir/depend
-	$(MAKE) -f CMakeFiles/HeapSort.dir/build.make CMakeFiles/HeapSort.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xu/work/algorithm/Heap-build/CMakeFiles --progress-num=1,2 "Built target HeapSort"
-.PHONY : CMakeFiles/HeapSort.dir/all
+CMakeFiles/Sort.dir/all:
+	$(MAKE) -f CMakeFiles/Sort.dir/build.make CMakeFiles/Sort.dir/depend
+	$(MAKE) -f CMakeFiles/Sort.dir/build.make CMakeFiles/Sort.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xu/work/algorithm/Sort-build/CMakeFiles --progress-num=1,2 "Built target Sort"
+.PHONY : CMakeFiles/Sort.dir/all
 
 # Include target in all.
-all: CMakeFiles/HeapSort.dir/all
+all: CMakeFiles/Sort.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/HeapSort.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/xu/work/algorithm/Heap-build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/HeapSort.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/xu/work/algorithm/Heap-build/CMakeFiles 0
-.PHONY : CMakeFiles/HeapSort.dir/rule
+CMakeFiles/Sort.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xu/work/algorithm/Sort-build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Sort.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xu/work/algorithm/Sort-build/CMakeFiles 0
+.PHONY : CMakeFiles/Sort.dir/rule
 
 # Convenience name for target.
-HeapSort: CMakeFiles/HeapSort.dir/rule
+Sort: CMakeFiles/Sort.dir/rule
 
-.PHONY : HeapSort
-
-# clean rule for target.
-CMakeFiles/HeapSort.dir/clean:
-	$(MAKE) -f CMakeFiles/HeapSort.dir/build.make CMakeFiles/HeapSort.dir/clean
-.PHONY : CMakeFiles/HeapSort.dir/clean
+.PHONY : Sort
 
 # clean rule for target.
-clean: CMakeFiles/HeapSort.dir/clean
+CMakeFiles/Sort.dir/clean:
+	$(MAKE) -f CMakeFiles/Sort.dir/build.make CMakeFiles/Sort.dir/clean
+.PHONY : CMakeFiles/Sort.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/Sort.dir/clean
 
 .PHONY : clean
 

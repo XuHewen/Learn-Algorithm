@@ -1,0 +1,3 @@
+/home/xu/work/algorithm/Sort-build/CMakeFiles/rebuild_cache.dir
+/home/xu/work/algorithm/Sort-build/CMakeFiles/Sort.dir
+/home/xu/work/algorithm/Sort-build/CMakeFiles/edit_cache.dir
