@@ -12,34 +12,24 @@ private:
         Node *left;
         Node *right;
 
-<<<<<<< HEAD
-        // Node(Key key, Value value) {
-        //     this->key = key;
-        //     this->value = value;
-        //     this->left = NULL;
-        //     this->right = NULL;
-        // }
-        Node(Key key, Value value) : key(key), value(value), left(NULL), right(NULL) {}
-=======
         Node(Key key, Value value) {
             this->key = key;
             this->value = value;
             left = NULL;
             right = NULL;
         }
->>>>>>> f002e8b74a5bcf6813fa76ddd39131792a66ded8
+
+        Node(Node *other) {
+            key = other->key;
+            value = other->value;
+            left = other->left;
+            right = other->right;
+        }
+
     };
 
     int count;
     Node* root;
-
-    void destroy(Node *node) {
-        if(node != NULL) {
-            destroy(node->left);
-            destroy(node->right);
-            delete node;
-        }
-    }
 
     Node* insert(Node *node, Key key, Value value) {
         if(node == NULL) {
@@ -57,13 +47,9 @@ private:
         return node;
     }
 
-<<<<<<< HEAD
-    bool contain(Node* root, Key key) {
-        if(root == NULL)
-=======
+
     bool contain(Node *node, Key key) {
         if(node == NULL)
->>>>>>> f002e8b74a5bcf6813fa76ddd39131792a66ded8
             return false;
         if(key == node->key)
             return true;
@@ -143,6 +129,36 @@ private:
         return root;
     }
 
+    Node* remove(Node *root, Key key) {
+        if(root == NULL)
+            return NULL;
+        if(key < root->key)
+            root->left = remove(root->left, key);
+        else if(key > root->key)
+            root->right = remove(root->right, key);
+        else if(key == root->key) {
+            if(root->left == NULL) {
+                Node *nodeRight = root->right;
+                delete root;
+                count--;
+                return nodeRight;
+            }
+            if(root->right == NULL) {
+                Node *nodeLeft = root->left;
+                delete root;
+                count--;
+                return nodeLeft;
+            }
+
+            Node *s = new Node(findMin(root->right));
+            std::cout << root->key << std::endl;
+            s->right = removeMin(root->right);
+            s->left = root->left;
+            delete root;
+            return s;
+        }
+    }
+
     void destroy(Node *root) {
         if(root != NULL) {
             destroy(root->left);
@@ -184,6 +200,7 @@ public:
     void postorder() {
         postorder(root);
     }
+
     void preorder_stk() {
         if(root == NULL) {
             std::cout << "No Node Found" << std::endl;
@@ -227,13 +244,6 @@ public:
         }
     }
 
-<<<<<<< HEAD
-    Value* search(Key key) {
-        return search(root, key);
-    }
-
-    ~BinarySearchTree() {
-=======
     void postorder_stk() {
         if(root == NULL) {
             std::cout << "No Node Found" << std::endl;
@@ -294,10 +304,12 @@ public:
         root = removeMax(root);
     }
 
-    
+    void remove(Key key) {
+        root = remove(root, key);
+    }
+
     ~BST() {
         // std::cout << "destroy tree" << std::endl;
->>>>>>> f002e8b74a5bcf6813fa76ddd39131792a66ded8
         destroy(root);
     }
 };
