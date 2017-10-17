@@ -19,7 +19,6 @@ private:
             right = NULL;
         }
 
-<<<<<<< HEAD
         Node(Node *other) {
             key = other->key;
             value = other->value;
@@ -27,8 +26,6 @@ private:
             right = other->right;
         }
 
-=======
->>>>>>> 7f6c6712876c4af2c940030edc1f861a36d57408
     };
 
     int count;
@@ -307,12 +304,9 @@ public:
         root = removeMax(root);
     }
 
-<<<<<<< HEAD
     void remove(Key key) {
         root = remove(root, key);
     }
-=======
->>>>>>> 7f6c6712876c4af2c940030edc1f861a36d57408
 
     ~BST() {
         // std::cout << "destroy tree" << std::endl;

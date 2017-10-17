@@ -26,19 +26,6 @@ int main()
     // bst.findMin();
     // bst.findMax();
 
-<<<<<<< HEAD
-    // bst.removeMin();
-    //
-    // bst.removeMax();
-    bst.remove(9);
-    bst.levelorder();
-    // std::cout << bst.size() << std::endl;
-=======
-    bst.removeMin();
-
-    bst.removeMax();
-    bst.preorder();
->>>>>>> 7f6c6712876c4af2c940030edc1f861a36d57408
 
     return 0;
 }
