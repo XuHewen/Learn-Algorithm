@@ -12,34 +12,17 @@ private:
         Node *left;
         Node *right;
 
-<<<<<<< HEAD
-        // Node(Key key, Value value) {
-        //     this->key = key;
-        //     this->value = value;
-        //     this->left = NULL;
-        //     this->right = NULL;
-        // }
-        Node(Key key, Value value) : key(key), value(value), left(NULL), right(NULL) {}
-=======
         Node(Key key, Value value) {
             this->key = key;
             this->value = value;
             left = NULL;
             right = NULL;
         }
->>>>>>> f002e8b74a5bcf6813fa76ddd39131792a66ded8
+
     };
 
     int count;
     Node* root;
-
-    void destroy(Node *node) {
-        if(node != NULL) {
-            destroy(node->left);
-            destroy(node->right);
-            delete node;
-        }
-    }
 
     Node* insert(Node *node, Key key, Value value) {
         if(node == NULL) {
@@ -57,13 +40,9 @@ private:
         return node;
     }
 
-<<<<<<< HEAD
-    bool contain(Node* root, Key key) {
-        if(root == NULL)
-=======
+
     bool contain(Node *node, Key key) {
         if(node == NULL)
->>>>>>> f002e8b74a5bcf6813fa76ddd39131792a66ded8
             return false;
         if(key == node->key)
             return true;
@@ -227,13 +206,6 @@ public:
         }
     }
 
-<<<<<<< HEAD
-    Value* search(Key key) {
-        return search(root, key);
-    }
-
-    ~BinarySearchTree() {
-=======
     void postorder_stk() {
         if(root == NULL) {
             std::cout << "No Node Found" << std::endl;
@@ -294,10 +266,9 @@ public:
         root = removeMax(root);
     }
 
-    
+
     ~BST() {
         // std::cout << "destroy tree" << std::endl;
->>>>>>> f002e8b74a5bcf6813fa76ddd39131792a66ded8
         destroy(root);
     }
 };
