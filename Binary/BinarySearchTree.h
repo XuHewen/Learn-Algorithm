@@ -16,7 +16,7 @@ private:
         //     this->right = NULL;
         // }
         Node(Key key, Value value) : key(key), value(value), left(NULL), right(NULL) {}
-    }
+    };
 
     Node* root;
     int count;
@@ -37,7 +37,7 @@ private:
         return root;
     }
 
-    bool contian(Node* root, Key key) {
+    bool contain(Node* root, Key key) {
         if(root == NULL)
             return false;
         if(root->key == key)
@@ -57,6 +57,14 @@ private:
             return search(root->left, key);
         else
             return search(root->right, key);
+    }
+
+    void destroy(Node *root) {
+        if(root != NULL) {
+            destroy(root->left);
+            destroy(root->right);
+            delete root;
+        }
     }
 
 public:
@@ -102,10 +110,10 @@ public:
     }
 
     Value* search(Key key) {
-        return search(root, key)
+        return search(root, key);
     }
 
     ~BinarySearchTree() {
-        //TODO
+        destroy(root);
     }
-}
+};
